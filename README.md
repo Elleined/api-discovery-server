@@ -49,6 +49,8 @@ discovery service. Load Balancer will first check in discovery service registry 
 ```
 - And your pom should look like check the microservice-pom-sample.txt 
 - After you add that when you start you microservice it will automatically registered in this discovery service. No additional configuration need after you do this it must work.
+// Note that the default port for discovery service are 8761 if you change it you need to add this in your microservice
+  - eureka.client.service-url.defaultZone={http://localhost:{discoveryServicePortNumber}/eureka/}
 
 # How to run multiple instances of your microservice
 - [Check this stackoverflow forum](https://stackoverflow.com/questions/58348457/running-two-spring-boot-instances)
