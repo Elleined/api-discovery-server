@@ -47,6 +47,7 @@ discovery service. Load Balancer will first check in discovery service registry 
 ```
 <spring-cloud.version>2022.0.3</spring-cloud.version> // Remember to check for the updated version
 ```
+- And your pom should look like check the microservice-pom-sample.txt 
 - After you add that when you start you microservice it will automatically registered in this discovery service. No additional configuration need after you do this it must work.
 
 # How to run multiple instances of your microservice
