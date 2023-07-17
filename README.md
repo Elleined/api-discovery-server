@@ -12,33 +12,8 @@ registers your microservices intances by the time you start it.
 - Luckily for you this repo is already a discovery service you will just start this and voila!! that's it you have discovery service
 
 # Register your microservice in discovery service
-- Run your discovery service.
-- Now open your microservice and add this dependency
-```
-<dependency>
-  <groupId>org.springframework.cloud</groupId>
-  <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-</dependency>
-```
-- And also add this in your pom
-```
-<dependencyManagement>
-  <dependencies>
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-dependencies</artifactId>
-      <version>${spring-cloud.version}</version>
-      <type>pom</type>
-      <scope>import</scope>
-    </dependency>
-  </dependencies>
-</dependencyManagement>
-```
-- And also add this in your pom properties
-```
-<spring-cloud.version>2022.0.3</spring-cloud.version> // Remember to check for the updated version
-```
-- And your pom should look like check the microservice-pom-sample.txt 
+- Run this repository and check this other repository
+[discovery-client]( https://github.com/Elleined/open-feign-discovery-client)
 - After you add that when you start you microservice it will automatically registered in this discovery service. No additional configuration need after you do this it must work.
 // Note that the default port for discovery service are 8761 if you change it you need to add this in your microservice
   - eureka.client.service-url.defaultZone={http://localhost:{discoveryServicePortNumber}/eureka/}
