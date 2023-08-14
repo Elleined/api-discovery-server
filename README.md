@@ -12,12 +12,14 @@ registers your microservices intances by the time you start it.
 - Luckily for you this repo is already a discovery service you will just start this and voila!! that's it you have discovery service
 
 # Register your microservice in discovery service
-- Run this repository and check this other repository
-[discovery-client]( https://github.com/Elleined/open-feign-discovery-client)
-- After you add that when you start you microservice it will automatically registered in this discovery service. No additional configuration need after you do this it must work.
-// Note that the default port for discovery service are 8761 if you change it you need to add this in your microservice
-  - eureka.client.service-url.defaultZone={http://localhost:{discoveryServicePortNumber}/eureka/}
-
+- Run this repository
+- Check this
+[microservice-discovery-client]( https://github.com/Elleined/open-feign-discovery-client)
+- After you run that when you start your microservice dicovery client it will automatically registered in this discovery service. No additional configuration needed after you do this it must work.
+// Note that the default port for discovery service are 8761 if you change it you need to add this in your microservice-discovery-client properties file
+```
+  eureka.client.service-url.defaultZone={http://localhost:{discoveryServicePortNumber}/eureka/}
+```
 # How to run multiple instances of your microservice
 - [Check this stackoverflow forum](https://stackoverflow.com/questions/58348457/running-two-spring-boot-instances)
 - [Check this youtube video](https://youtu.be/diAwbLSXYTk)
