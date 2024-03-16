@@ -2,16 +2,16 @@ version: "3.8"
 services:
   api_discovery_server_app:
     build: .
-    image: elleined/api_discovery_server
+    image: elleined/api-discovery-server
     container_name: api_discovery_server_app
     restart: always
     networks:
-      - api_discovery_server
+      - api_discovery_server_network
     ports:
       - "8761:8761"
 networks:
-  api_discovery_server:
-    name: api_discovery_server
+  api_discovery_server_network:
+    name: api_discovery_server_network
     external: false
     ipam:
       driver: default
