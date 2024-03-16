@@ -1,5 +1,5 @@
-# eureka-discovery-service
-Discovery service for spring boot microservices
+# api-discovery-server
+Discovery Server for your Microservices
 
 # What is client side discovery service
 - It is registry where all your microservices intances are running it keeps track of what server is down and what server is up dynamically
