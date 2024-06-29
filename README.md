@@ -9,7 +9,16 @@ are random configuring it will be a hussle since you dont know what port it will
 registers your microservices intances by the time you start it.
 
 # How to setup discovery service 
-- Luckily for you this repo is already a discovery service you will just start this and voila!! that's it you have discovery service
+- Luckily for you this repo is already a discovery service you will just start this and voila!! that's it you have discovery service.
+
+# What is Load Balancer
+- Suppose you have 100 instances of your microservice are running and you want every request is distributed in different instances to reduce the
+load in one instance this is where load balancer will take action it will balance all the load in different servers to handle all the request. Sometimes
+it will direct the request in instances no.1 or sometimes in instance no.2 it will check what instance is available to handle the request.
+
+# Relation of Load Balancer and Discovery Service
+- Lets say you have 100 intances of your microservice is running and registered in your
+discovery service. Load Balancer will first check in discovery service registry which instances are down or up and it will balance the load in different instances.
 
 # Register your microservice in discovery service
 - Run this repository
