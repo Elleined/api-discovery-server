@@ -1,10 +1,8 @@
 version: "3.8"
 services:
-  api_discovery_server_app:
-    build: .
+  api_discovery_server:
     image: elleined/api-discovery-server
-    container_name: api_discovery_server_app
-    restart: always
+    container_name: api_discovery_server
     networks:
       - api_discovery_server_network
     ports:
