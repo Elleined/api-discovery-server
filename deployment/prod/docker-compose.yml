@@ -1,0 +1,27 @@
+services:
+  api-discovery-server:
+    image: elleined/api-discovery-server:${IMAGE_TAG}
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    environment:
+      - TZ=Asia/Manila
+      - PORT=${PORT}
+      - LOG_LEVEL=${LOG_LEVEL}
+      - ALLOWED_ORIGINS=${ALLOWED_ORIGINS}
+    ports:
+      - "${PORT}:${PORT}"
+    networks:
+      - prod-discovery-server-network
+    healthcheck:
+      test: [ "CMD", "wget", "--spider", "http://${CONTAINER_NAME}:${PORT}/actuator/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+networks:
+  prod-discovery-server-network:
+    name: ${NETWORK_NAME}
+    external: false
+    ipam:
+      driver: default
