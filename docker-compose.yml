@@ -6,7 +6,7 @@ services:
     networks:
       - api_discovery_server_network
     env_file:
-      - .env
+      - deployment/.env
     ports:
       - "8761:8761"
 networks:

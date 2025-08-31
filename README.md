@@ -1,4 +1,3 @@
-# api-discovery-server
 Discovery Server for your Microservices
 
 # What is client side discovery service
